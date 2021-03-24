@@ -7,6 +7,27 @@ body {
     margin-right: 30px;
     background-image: url(../images/background.jpg);
 }
+
+p, h1, h3, div {
+    padding: 10px;
+    margin: auto;
+}
+
+a {
+    color: #483d8b;
+    padding: 2px;
+    text-decoration: none;
+    /* display: inline; */
+}
+
+a:hover, a:focus {
+    border: 1px #483d8b solid;
+    border-radius: 3px;
+}
+
+p.credit {
+    font-size: 0.5em;
+}
 footer {
     background: #fffef2;
     text-align: center;
@@ -16,36 +37,64 @@ footer {
     margin-top: 10px;
     color: #483d8b;
     font-size: 20px;
+    border: 2px dotted;
     font-family: "Playfair Display", serif;
 }
 
 header {
     background: #fffef2;
-    padding: 10px;
-    margin: 10px;
-    border: 2px solid turquoise;
+    border: 2px solid #005253;
     display: flex;
     flex-direction: column;
+    padding-bottom: 15px;
 }
 
 .box-color {
-    color: turquoise;
+    color: #005253;
 }
 
-h1{
+h1, h2{
     color: #483d8b;
     font-size: 50px;
     text-align: center;
     font-family: "Playfair Display", serif;
-    margin-bottom: 15px;
 }
 
-/* #skip {
-    background: turquoise;
-} */
+h1.animate {
+    position: relative;
+    animation-name: rise;
+    animation-duration: 1s;
+}
 
-#skip:hover {
-    border: 2px solid #483d8b;
+@keyframes rise {
+    0% {
+        opacity: 0;
+        top: 100px;
+}
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+@-webkit-keyframes rise {
+    0% {
+        opacity: 0;
+        top: 100px;
+}
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+h2 {
+    font-size: 30px;
+}
+
+#skip {
+    /* display: inline-block; */
+    /* background: turquoise; */
 }
 
 *:focus {
@@ -68,9 +117,9 @@ h1{
     margin: 10px;
 }
 
-.nav-item:hover {
+/* .nav-item:hover {
     border: 2px solid #483d8b;
-}
+} */
 
 nav ul {
     list-style: none;
@@ -79,8 +128,9 @@ nav ul {
 /* author */
 
 div.intro {
-    border: 1px solid; 
+    border: 1px dotted; 
     padding: 5px;
+    margin-top: 5px;
 }
 
 .page1 {
@@ -98,7 +148,7 @@ div.intro {
     /* border: 2px solid black; */
 }
 
-.author, .contents, .featured, .index, .recommended {
+.author, .contact, .featured, .index, .recommended {
     color: #483d8b;
     border-left: #483d8b solid 2px;
     border-right: #483d8b solid 2px;
@@ -107,10 +157,9 @@ div.intro {
     /* text-align: center; */
 }
 
-.author:visited, .contents:visited, .featured:visited, .index:visited, .recommended:visited {
+.author:visited, .contact:visited, .featured:visited, .index:visited, .recommended:visited {
     color: black;
 }
-
 
 /* contents */
 
@@ -121,26 +170,57 @@ div.intro {
 /* recommended */
 div.recommend {
     width: 80%;
+    margin: auto;
+    padding-top: 10px;
+}
+
+div.book, div.movie, div.show {
+    border: 1.5px #005253 ridge;
+    margin: auto;
     display: grid;
-    grid-template-columns: auto;
-    border: 1.5px solid pink; 
-    align-content: center;
+    grid-template-columns: 1fr;
 }
 
 div > img {
-    width: 60%;
+    width: 30%;
     padding: 10px;
-    filter: blur(10px);
-    transition-property: 
+    max-width: 300px;
+    margin: auto;
+    filter: brightness(70%) grayscale(50%);
+    transition-property: filter, border, border-radius;
+    /* transition-duration: 1s; */
 }
 
-div > img:hover {
+
+div > img:hover, div > img:focus {
     filter: none;
-    border: 2px ridge turquoise;
+    border: 2px outset black;
+    border-radius: 5px;
     /* dashed dotted double groove inset outset ridge solid none */
 }
 
+@media (prefers-reduced-motion) {
+h1.animate {
+    animation: none;
+    color: #483d8b;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    }
+}
+/* tablet view */
+@media (min-width: 600px) {
+    div.book, div.movie, div.show {
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
-
-
-/* @media (min-width: ) */
+/* desktop view */
+@media (min-width: 850px) {
+    div.book, div.movie, div.show {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    div > img {
+        width: 80%;
+    }
+}
