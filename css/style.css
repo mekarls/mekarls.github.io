@@ -125,22 +125,6 @@ nav ul {
     list-style: none;
 }
 
-/* author */
-
-div.intro {
-    border: 1px dotted; 
-    padding: 5px;
-    margin-top: 5px;
-}
-
-.page1 {
-    display: block;
-    width: 55%;
-    align-content: center;
-    margin: 15px auto 15px auto;
-    max-width: 300px;
-}
-
 .p {
     text-indent: 45px;
     margin: 10px;
@@ -161,11 +145,84 @@ div.intro {
     color: black;
 }
 
-/* contents */
+/* author */
 
-/* featured */
+div.intro {
+    border: 1px dotted; 
+    padding: 5px;
+    margin-top: 5px;
+}
 
-/* index */
+.page1, .dog {
+    display: block;
+    width: 55%;
+    align-content: center;
+    margin: 15px auto 15px auto;
+    max-width: 300px;
+    filter: none;
+}
+
+/* .dog {
+    filter: none;
+    /* transition-property: none; 
+} */
+
+/* .flip-card {
+    background-color: transparent;
+    width: 500px;
+    height: 500px;
+}
+
+.fc-inner {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    text-align: left;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+
+}
+
+.flip-card:hover, .fc-inner {
+    transform: rotateY(180deg);
+}
+
+.fc-front, .fc-back {
+    position: absolute;
+    width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.fc-front {
+    background: purple;
+
+}
+
+.fc-back {
+    transform: rotateY(180deg);
+} */
+
+
+/* contact */
+
+/* featured -spotlight */
+
+/* index -past work */
+div.thrive > img, div.graphic-design > img {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 0;
+    border: 2px double #005253;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+
+
 
 /* recommended */
 div.recommend {
@@ -181,18 +238,18 @@ div.book, div.movie, div.show {
     grid-template-columns: 1fr;
 }
 
-div > img {
+img.rec {
     width: 30%;
     padding: 10px;
     max-width: 300px;
     margin: auto;
     filter: brightness(70%) grayscale(50%);
     transition-property: filter, border, border-radius;
-    /* transition-duration: 1s; */
+    transition-duration: 1s;
 }
 
 
-div > img:hover, div > img:focus {
+img.rec:hover, img.rec:focus {
     filter: none;
     border: 2px outset black;
     border-radius: 5px;
