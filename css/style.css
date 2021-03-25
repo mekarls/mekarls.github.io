@@ -155,19 +155,14 @@ div.intro {
     margin-top: 5px;
 }
 
-.page1, .dog {
+.michelle, .dog, .glee {
     display: block;
-    width: 55%;
+    width: 60%;
     align-content: center;
     margin: 15px auto 15px auto;
     max-width: 300px;
     filter: none;
 }
-
-/* .dog {
-    filter: none;
-    /* transition-property: none; 
-} */
 
 /* .flip-card {
     background-color: transparent;
