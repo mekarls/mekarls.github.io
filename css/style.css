@@ -252,18 +252,17 @@ p.bottom {
 
 div.book, div.movie, div.show {
     border: 1.5px #005253 ridge;
+    padding: 10px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr;
+    /* grid-row-gap: 20px 10px; */
 }
-/* 
-div.book > p {
-    padding-bottom: 20px;
-} */
+
 
 img.rec {
     width: 50%;
-    padding-top: 20px;
+    padding-top: 0px;
     max-width: 300px;
     margin: auto;
     filter: brightness(70%) grayscale(50%);
