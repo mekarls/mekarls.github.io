@@ -143,7 +143,7 @@ h2 {
     font-size: 30px;
 }
 
-a.skip {
+#skip {
     position: absolute;
     left: 0px;
     top: -40px;
@@ -152,7 +152,7 @@ a.skip {
     z-index: 1;
 }
 
-a.skip:focus {
+#skip:focus {
     top: 0px;
 }
 
@@ -223,6 +223,10 @@ div.intro {
     margin: 15px auto 15px auto;
     max-width: 300px;
     filter: none;
+}
+
+.dog {
+    width: 80%;
 }
 
 /* .flip-card {
@@ -340,52 +344,54 @@ h1.animate1, h1.animate2 {
     }
 }
 /* tablet view */
-@media (min-width: 600px) {
+@media (min-width: 650px) {
     div.book, div.movie, div.show {
         grid-template-columns: 1fr 1fr;
+        row-gap: 5px;
     }
 
-    h1, h2 {
-        text-align: center;
+
+    h1.animate1 {
+        text-align: left;
     }
+
     header {
         flex-direction: column-reverse;
     }
     .nav-item {
-        /* flex-direction: row; */
         justify-content: right ;
-    }
-    /* a.nav-item:focus {
-        margin-top: 10px; */
     }
     #nav-menu {
         flex-direction: row;
     }
+    .michelle, .dog, .glee {
+        /* display: inline; */
+        display: block;
+        position: sticky;
+        float: left;
+        margin: 10px;
+    }
+
+    .caption {
+        position: relative;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .capt {
+        position: absolute;
+        top: 10px;
+        background: #fffef2;
+        padding: 5px;
+        border: double 2px #005253;
+        text-align: left;
+    }
+
+    .p {
+        text-indent: 20px;
+    }
 }
 
-
-
-
-/* #nav-menu {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-}
-header {
-    background: #fffef2;
-    border: 2px solid #005253;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 15px;
-}
-
-.nav-item {
-    font-size: 15px;
-    text-align: center;
-    margin: 10px;
-} */
 
 
 /* desktop view */
