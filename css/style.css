@@ -49,6 +49,8 @@ header {
     display: flex;
     flex-direction: column;
     padding-bottom: 15px;
+    padding-top: 15px;
+    margin-top: 28px;
 }
 
 .box-color {
@@ -141,10 +143,18 @@ h2 {
     font-size: 30px;
 }
 
-/* #skip {
-    /* display: inline-block; */
-    /* background: turquoise;
-} */
+a.skip {
+    position: absolute;
+    left: 0px;
+    top: -40px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+}
+
+a.skip:focus {
+    top: 0px;
+}
 
 *:focus {
     border: 2px solid #483d8b;
@@ -334,7 +344,49 @@ h1.animate1, h1.animate2 {
     div.book, div.movie, div.show {
         grid-template-columns: 1fr 1fr;
     }
+
+    h1, h2 {
+        text-align: center;
+    }
+    header {
+        flex-direction: column-reverse;
+    }
+    .nav-item {
+        /* flex-direction: row; */
+        justify-content: right ;
+    }
+    /* a.nav-item:focus {
+        margin-top: 10px; */
+    }
+    #nav-menu {
+        flex-direction: row;
+    }
 }
+
+
+
+
+/* #nav-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+header {
+    background: #fffef2;
+    border: 2px solid #005253;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+.nav-item {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px;
+} */
+
 
 /* desktop view */
 @media (min-width: 850px) {
