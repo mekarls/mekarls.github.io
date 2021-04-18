@@ -198,46 +198,6 @@ div.intro {
     min-width: 300px;
 }
 
-/* .dog {
-    width: 80%;
-} */
-
-/* .flip-card {
-    background-color: transparent;
-    width: 500px;
-    height: 500px;
-}
-
-.fc-inner {
-    position: relative;
-    width: 80%;
-    height: 80%;
-    text-align: left;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-
-}
-
-.flip-card:hover, .fc-inner {
-    transform: rotateY(180deg);
-}
-
-.fc-front, .fc-back {
-    position: absolute;
-    width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.fc-front {
-    background: purple;
-
-}
-
-.fc-back {
-    transform: rotateY(180deg);
-} */
 
 
 /* contact */
@@ -267,10 +227,10 @@ div.gd-flex > img, div.t-flex > img {
     border: 2px double #005253;
 }
 
-div.thrive, div.graphic-design {
+/* div.thrive, div.graphic-design {
     display: grid;
     grid-template-columns: 1fr;
-}
+} */
 
 p.bottom {
     text-align: center;
@@ -388,16 +348,17 @@ h1.animate1 {
     div.thrive, div.graphic-design {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
     }
 
     div.gd-flex > img, div.t-flex > img {
         width: 40%;
     }
 
-    div.gd-flex, div.t-flex {
+    /* div.gd-flex, div.t-flex {
         display: flex;
         flex-direction: column;
-    }
+    } */
 }
 
 
