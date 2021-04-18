@@ -108,37 +108,6 @@ h1.animate1 {
     }
 }
 
-/* h1.animate2 {
-    position: relative;
-    animation-name: pulse;
-    animation-duration: 1s;
-    animation-delay: 1s;
-}
-
-@keyframes pulse {
-    0% {
-       font-size: 1em; 
-    }
-    50% {
-        font-size: 1.5em;
-    }
-    100% {
-        font-size: 1em;
-    }
-}
-
-@-webkit-keyframes pulse {
-    0% {
-        font-size: 1em; 
-    }
-    50% {
-     font-size: 1.5em;
-        }
-    100% {
-        font-size: 1em;
-    }
-} */
-
 h2 {
     font-size: 30px;
 }
@@ -171,14 +140,10 @@ h2 {
 }
 
 .nav-item {
-    font-size: 15px;
+    font-size: 1.2em;
     text-align: center;
     margin: 10px;
 }
-
-/* .nav-item:hover {
-    border: 2px solid #483d8b;
-} */
 
 nav ul {
     list-style: none;
@@ -201,6 +166,7 @@ nav ul {
     border-right: #483d8b solid 2px;
     padding: 2px;
     text-decoration: none;
+    text-transform: uppercase;
     /* text-align: center; */
 }
 
@@ -216,18 +182,25 @@ div.intro {
     margin-top: 5px;
 }
 
-.michelle, .dog, .glee {
-    display: block;
-    width: 60%;
-    align-content: center;
-    margin: 15px auto 15px auto;
-    max-width: 300px;
-    filter: none;
+.capt {
+    /* position: absolute;
+    top: 10px; */
+    background: #fffef2;
+    padding: 5px;
+    border: double 2px #005253;
+    text-align: left;
 }
 
-.dog {
-    width: 80%;
+.michelle, .dog, .glee {
+    width: 60%;
+    display: block;
+    margin: 15px auto 15px auto;
+    min-width: 300px;
 }
+
+/* .dog {
+    width: 80%;
+} */
 
 /* .flip-card {
     background-color: transparent;
@@ -283,19 +256,20 @@ div.ghibli > img, div.writing > img {
     /* justify-content: center; */
 }
 
-/* div.writing > img {
-    width: 70%;
-} */
 
 /* index -past work */
-div.thrive > img, div.graphic-design > img {
-    width: 80%;
+div.gd-flex > img, div.t-flex > img {
+    width: 60%;
+    min-width: 300px;
     margin: auto;
     margin-bottom: 5px;
     padding: 0;
     border: 2px double #005253;
-    display: flex;
-    flex-direction: column;
+}
+
+div.thrive, div.graphic-design {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 p.bottom {
@@ -335,7 +309,7 @@ img.rec:hover, img.rec:focus {
 }
 
 @media (prefers-reduced-motion) {
-h1.animate1, h1.animate2 {
+h1.animate1 {
     animation: none;
     color: #483d8b;
     font-size: 50px;
@@ -343,44 +317,64 @@ h1.animate1, h1.animate2 {
     font-family: "Playfair Display", serif;
     }
 }
+
+
+
 /* tablet view */
 @media (min-width: 650px) {
+
     div.book, div.movie, div.show {
         grid-template-columns: 1fr 1fr;
         row-gap: 5px;
     }
 
-
     h1.animate1 {
         text-align: left;
     }
-
+    
     header {
-        flex-direction: column-reverse;
-    }
-    .nav-item {
-        justify-content: right ;
-    }
-    #nav-menu {
         flex-direction: row;
     }
-    .michelle, .dog, .glee {
-        /* display: inline; */
-        display: block;
-        position: sticky;
-        float: left;
-        margin: 10px;
+    .nav-item {
+        justify-content: right;
     }
 
+    #nav-menu {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    div.flex-michelle, div.flex-tesla, div.flex-glee {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    div.flex-michelle {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    div.flex-tesla {
+        flex-direction: row-reverse;
+    }
+ 
+    .michelle, .glee {
+        margin-left: 0;
+        min-width: 350px;
+    }
+    .glee {
+        min-width: 500px;
+    }
+    
     .caption {
         position: relative;
         text-align: center;
         margin-bottom: 80px;
-    }
+    } 
 
     .capt {
         position: absolute;
-        top: 10px;
+        top: 10px; 
         background: #fffef2;
         padding: 5px;
         border: double 2px #005253;
@@ -390,15 +384,50 @@ h1.animate1, h1.animate2 {
     .p {
         text-indent: 20px;
     }
+
+    div.thrive, div.graphic-design {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div.gd-flex > img, div.t-flex > img {
+        width: 40%;
+    }
+
+    div.gd-flex, div.t-flex {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
 
-/* desktop view */
+/*desktop view*/
 @media (min-width: 850px) {
+    h1.animate1 {
+        text-align: center;
+    }
+
+    header {
+        flex-direction: column-reverse;
+    }
+
+    .nav-item {
+        justify-content: right;
+    }
+
+    #nav-menu {
+        flex-direction: row;
+    }
+    
+    .michelle, .glee, .tesla {
+        margin: 0 auto;
+    }
+    
     div.book, div.movie, div.show {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
     div > img {
         width: 80%;
     }
