@@ -26,7 +26,55 @@
     </header>
     <main id="main">
         <h1 class="animate1 animate2">I Want to Hear From You!</h1>
-        <p> this page contains a way to contact the designer (not included in mobile view progress check</p>
+        <form action='https://formspree.io/f/mdoynron' method="POST">
+            <p>Fill out the following with your information and a message!</p>
+            <fieldset>
+                <legend>Contact Form</legend>
+
+                <div class="form-container">
+                    <label for='lastname'>Last Name:</label><br>
+                    <input type='text' id='lastname' placeholder='Enter last name' name='lastname'><br>
+
+                    <label for='firstname'>First Name:</label><br>
+                    <input type='text' id='firstname' placeholder='Enter first name' name='firstname'><br>
+
+                    <label for='email'>Email:</label><br>
+                    <input type='text' id='email' placeholder='Enter email' name='email'><br>
+                    
+                    <h2 class='contact-f'>Current Status (please select one):</h2>
+                    <div class="radio">
+                        
+                        <input type='radio' id='uni' name='radio'>
+                        <label for='uni'>Student (University)</label><br>
+                        
+                        <input type='radio' id='grad' name='radio'>
+                        <label for='grad'>Recent Graduate</label><br>
+                        
+                        <input type='radio' id='job' name='radio'>
+                        <label for='job'>Working/Career</label><br>
+                        
+                        <!-- <input type='radio' id='other' name='radio'>
+                        <label for='other'>Other (please specify below):</label><br> -->
+
+                        <label for='other-status'><input type='radio' id='other' name='radio'>
+                            <label for='other'>Other (please specify):</label></label>
+                        <input type='text' id='other-status' placeholder='Enter other option' name='radio'><br>
+                    </div>
+                    <label for='message'>Leave A Message</label>
+                    <textarea placeholder="Enter a message" id='message' name='message'></textarea><br>
+
+                    <input type='checkbox' id='reply' name='reply?'>
+                    <label for='reply'>Check if you'd like a response from me</label><br>
+                <input type="submit" value='Submit Form'></input>
+                </div>
+            </fieldset>
+        </form>
+
+
+
+
+
+    
     <a class='top' href="#top">Take me back to the top!</a>
     </main>
     <footer>
