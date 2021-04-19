@@ -255,6 +255,8 @@ div.intro {
     background: #fffef2;
     border: #005253 2px dashed;
     transform: rotateY(180deg);
+    text-align: center;
+    margin: auto;
 }
 
 
