@@ -230,7 +230,7 @@ div.intro {
     /* border: 2px red solid; */
 }
 
-.card-container:focus .card, .card-container:hover .card, .card-container:focus-within .card {
+.card-container:focus .card, .card-container:active .card, .card-container:hover .card, .card-container:focus-within .card {
     transform: rotateY(180deg);
 }
 
