@@ -375,6 +375,10 @@ h1.animate1 {
     text-align: center;
     font-family: "Playfair Display", serif;
     }
+
+    .card {
+        transition: transform 0s;
+    }
 }
 
 
@@ -530,7 +534,7 @@ h1.animate1 {
     }
 
     .travel-par, .travel-par2 {
-        min-height: 400px;
+        min-height: 450px;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -542,5 +546,11 @@ h1.animate1 {
         display: block;
         margin: 10px auto;
     }
+
+    @media (prefers-reduced-motion) {
+        .travel-par2, .travel-par {
+            background-attachment: scroll;
+        }
+        }
 
 }
